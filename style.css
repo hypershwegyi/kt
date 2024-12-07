@@ -1,0 +1,42 @@
+.image-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .image-container img {
+    width: 200px;
+    height: 200px;
+  }
+  .image-container {
+    display: flex;
+    justify-content: space-around;
+    /* ပုံများကို အနည်းငယ် အပေါ်အောက် ကြွလာစေရန် */
+    animation: bounce 2s infinite;
+  }
+  
+  .image-container img {
+    width: 200px;
+    height: 200px;
+    /* ပုံများအားလုံးကို တူညီသော အရောင်ဖြင့် နောက်ခံပေးရန် */
+    background-color: #f0f0f0;
+    /* ပုံများကို စက်ဝိုင်းပုံ ဖြစ်စေရန် */
+    border-radius: 50%;
+    /* ပုံများအပေါ် hover လုပ်လိုက်သောအခါ အရောင်ပြောင်းလဲစေရန် */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
